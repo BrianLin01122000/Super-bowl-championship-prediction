@@ -1,0 +1,1079 @@
+<?xml version="1.0"?>
+<AlteryxDocument yxmdVer="2022.3">
+  <Nodes>
+    <Node ToolID="1">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="54" y="80" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <File OutputFileName="" RecordLimit="" SearchSubDirs="False" FileFormat="25">C:\Users\Brian Lin\Desktop\UCI\3rd quarter\Applied Forecast Modeling\NFL event\NFL Data.xlsx|||`Sheet1$`</File>
+          <FormatSpecificOptions>
+            <FirstRowData>False</FirstRowData>
+            <ImportLine>1</ImportLine>
+          </FormatSpecificOptions>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>NFL Data.xlsx
+Query=`Sheet1$`</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="team" size="255" source="File: C:\Users\Brian Lin\Desktop\UCI\3rd quarter\Applied Forecast Modeling\NFL event\NFL Data.xlsx|||`Sheet1$`" type="V_String" />
+            <Field name="offence_RUSHING" source="File: C:\Users\Brian Lin\Desktop\UCI\3rd quarter\Applied Forecast Modeling\NFL event\NFL Data.xlsx|||`Sheet1$`" type="Double" />
+            <Field name="offence_PASSING" source="File: C:\Users\Brian Lin\Desktop\UCI\3rd quarter\Applied Forecast Modeling\NFL event\NFL Data.xlsx|||`Sheet1$`" type="Double" />
+            <Field name="offence_OVERALL" source="File: C:\Users\Brian Lin\Desktop\UCI\3rd quarter\Applied Forecast Modeling\NFL event\NFL Data.xlsx|||`Sheet1$`" type="Double" />
+            <Field name="defence_RUSHING" source="File: C:\Users\Brian Lin\Desktop\UCI\3rd quarter\Applied Forecast Modeling\NFL event\NFL Data.xlsx|||`Sheet1$`" type="Double" />
+            <Field name="defence_PASSING" source="File: C:\Users\Brian Lin\Desktop\UCI\3rd quarter\Applied Forecast Modeling\NFL event\NFL Data.xlsx|||`Sheet1$`" type="Double" />
+            <Field name="defence_OVERALL" source="File: C:\Users\Brian Lin\Desktop\UCI\3rd quarter\Applied Forecast Modeling\NFL event\NFL Data.xlsx|||`Sheet1$`" type="Double" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="2">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="54" y="260" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <File OutputFileName="" RecordLimit="" SearchSubDirs="False" FileFormat="25">C:\Users\Brian Lin\Desktop\UCI\3rd quarter\Applied Forecast Modeling\NFL event\NFL Data.xlsx|||`Data$`</File>
+          <FormatSpecificOptions>
+            <FirstRowData>False</FirstRowData>
+            <ImportLine>1</ImportLine>
+          </FormatSpecificOptions>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>NFL Data.xlsx
+Query=`Data$`</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Team1" size="255" source="File: C:\Users\Brian Lin\Desktop\UCI\3rd quarter\Applied Forecast Modeling\NFL event\NFL Data.xlsx|||`Data$`" type="V_String" />
+            <Field name="Week" source="File: C:\Users\Brian Lin\Desktop\UCI\3rd quarter\Applied Forecast Modeling\NFL event\NFL Data.xlsx|||`Data$`" type="Double" />
+            <Field name="Game Number" source="File: C:\Users\Brian Lin\Desktop\UCI\3rd quarter\Applied Forecast Modeling\NFL event\NFL Data.xlsx|||`Data$`" type="Double" />
+            <Field name="Game Location" size="255" source="File: C:\Users\Brian Lin\Desktop\UCI\3rd quarter\Applied Forecast Modeling\NFL event\NFL Data.xlsx|||`Data$`" type="V_String" />
+            <Field name="Team2" size="255" source="File: C:\Users\Brian Lin\Desktop\UCI\3rd quarter\Applied Forecast Modeling\NFL event\NFL Data.xlsx|||`Data$`" type="V_String" />
+            <Field name="Team1_Score" source="File: C:\Users\Brian Lin\Desktop\UCI\3rd quarter\Applied Forecast Modeling\NFL event\NFL Data.xlsx|||`Data$`" type="Double" />
+            <Field name="Team2_Score" source="File: C:\Users\Brian Lin\Desktop\UCI\3rd quarter\Applied Forecast Modeling\NFL event\NFL Data.xlsx|||`Data$`" type="Double" />
+            <Field name="Team1_Passing" source="File: C:\Users\Brian Lin\Desktop\UCI\3rd quarter\Applied Forecast Modeling\NFL event\NFL Data.xlsx|||`Data$`" type="Double" />
+            <Field name="Team1_Rushing" source="File: C:\Users\Brian Lin\Desktop\UCI\3rd quarter\Applied Forecast Modeling\NFL event\NFL Data.xlsx|||`Data$`" type="Double" />
+            <Field name="Team1_Turnovers" source="File: C:\Users\Brian Lin\Desktop\UCI\3rd quarter\Applied Forecast Modeling\NFL event\NFL Data.xlsx|||`Data$`" type="Double" />
+            <Field name="Team2_Passing" source="File: C:\Users\Brian Lin\Desktop\UCI\3rd quarter\Applied Forecast Modeling\NFL event\NFL Data.xlsx|||`Data$`" type="Double" />
+            <Field name="Team2_Rushing" source="File: C:\Users\Brian Lin\Desktop\UCI\3rd quarter\Applied Forecast Modeling\NFL event\NFL Data.xlsx|||`Data$`" type="Double" />
+            <Field name="Team2_Turnovers" source="File: C:\Users\Brian Lin\Desktop\UCI\3rd quarter\Applied Forecast Modeling\NFL event\NFL Data.xlsx|||`Data$`" type="Double" />
+            <Field name="Team1_win" size="255" source="File: C:\Users\Brian Lin\Desktop\UCI\3rd quarter\Applied Forecast Modeling\NFL event\NFL Data.xlsx|||`Data$`" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="3">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+        <Position x="294" y="152" />
+      </GuiSettings>
+      <Properties>
+        <Configuration joinByRecordPos="False">
+          <JoinInfo connection="Left">
+            <Field field="team" />
+          </JoinInfo>
+          <JoinInfo connection="Right">
+            <Field field="Team1" />
+          </JoinInfo>
+          <SelectConfiguration>
+            <Configuration outputConnection="Join">
+              <OrderChanged value="True" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Left_team" selected="True" rename="Team1" input="Left_" />
+                <SelectField field="Right_Team2" selected="True" input="Right_" />
+                <SelectField field="Right_Team1_Score" selected="True" input="Right_" />
+                <SelectField field="Right_Team2_Score" selected="True" input="Right_" />
+                <SelectField field="Right_Team1_Passing" selected="True" input="Right_" />
+                <SelectField field="Right_Team1_Rushing" selected="True" input="Right_" />
+                <SelectField field="Right_Team1_Turnovers" selected="True" input="Right_" />
+                <SelectField field="Right_Team2_Passing" selected="True" input="Right_" />
+                <SelectField field="Right_Team2_Rushing" selected="True" input="Right_" />
+                <SelectField field="Right_Team2_Turnovers" selected="True" input="Right_" />
+                <SelectField field="Right_Team1_win" selected="True" input="Right_" />
+                <SelectField field="Right_Game Location" selected="False" input="Right_" />
+                <SelectField field="Left_offence_RUSHING" selected="True" rename="team1_offence_rushing" input="Left_" />
+                <SelectField field="Left_offence_PASSING" selected="True" rename="team1_offence_passing	" input="Left_" />
+                <SelectField field="Left_offence_OVERALL" selected="True" rename="team1_offence_overall" input="Left_" />
+                <SelectField field="Left_defence_RUSHING" selected="True" rename="team1_defence_rushing" input="Left_" />
+                <SelectField field="Left_defence_PASSING" selected="True" rename="team1_defence_passing" input="Left_" />
+                <SelectField field="Left_defence_OVERALL" selected="True" rename="team1_defence_overall	" input="Left_" type="FixedDecimal" size="19.6" />
+                <SelectField field="Right_Team1" selected="False" input="Right_" />
+                <SelectField field="Right_Game Number" selected="False" input="Right_" />
+                <SelectField field="*Unknown" selected="True" />
+                <SelectField field="Right_Week" selected="False" input="Right_" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+    </Node>
+    <Node ToolID="6">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="438" y="152" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Expression>[Team1] = "Kansas City Chiefs"||[Team1] = "Philadelphia Eagles"</Expression>
+          <Mode>Custom</Mode>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>[Team1] = "Kansas City Chiefs"||[Team1] = "Philadelphia Eagles"</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+    </Node>
+    <Node ToolID="7">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+        <Position x="546" y="104" />
+      </GuiSettings>
+      <Properties>
+        <Configuration joinByRecordPos="False">
+          <JoinInfo connection="Left">
+            <Field field="team" />
+          </JoinInfo>
+          <JoinInfo connection="Right">
+            <Field field="Team2" />
+          </JoinInfo>
+          <SelectConfiguration>
+            <Configuration outputConnection="Join">
+              <OrderChanged value="True" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Left_team" selected="False" input="Left_" />
+                <SelectField field="Right_Team1" selected="True" input="Right_" type="String" size="16384" />
+                <SelectField field="Right_Team2" selected="True" input="Right_" type="String" size="16384" />
+                <SelectField field="Right_Team1_Score" selected="True" input="Right_" />
+                <SelectField field="Right_Team2_Score" selected="True" input="Right_" />
+                <SelectField field="Right_Team1_Passing" selected="True" input="Right_" />
+                <SelectField field="Right_Team1_Rushing" selected="True" input="Right_" />
+                <SelectField field="Right_Team1_Turnovers" selected="True" input="Right_" />
+                <SelectField field="Right_Team2_Passing" selected="True" input="Right_" />
+                <SelectField field="Right_Team2_Rushing" selected="True" input="Right_" />
+                <SelectField field="Right_Team2_Turnovers" selected="True" input="Right_" />
+                <SelectField field="Right_Team1_win" selected="True" input="Right_" type="String" size="16384" />
+                <SelectField field="Right_team1_offence_rushing" selected="True" input="Right_" />
+                <SelectField field="Right_team1_offence_passing " selected="True" input="Right_" />
+                <SelectField field="Right_team1_offence_overall" selected="True" input="Right_" />
+                <SelectField field="Right_team1_defence_rushing" selected="True" input="Right_" />
+                <SelectField field="Right_team_defence_passing" selected="True" input="Right_" />
+                <SelectField field="Right_team1_defence_passing" selected="True" input="Right_" />
+                <SelectField field="Right_team1_defence_overall " selected="True" input="Right_" />
+                <SelectField field="Left_defence_RUSHING" selected="True" rename="team2_defence_rushing" input="Left_" />
+                <SelectField field="Left_defence_PASSING" selected="True" rename="team2_defence_passing" input="Left_" />
+                <SelectField field="Left_defence_OVERALL" selected="True" rename="team2_defence_overall" input="Left_" />
+                <SelectField field="Left_offence_RUSHING" selected="True" rename="team2_offence_rushing" input="Left_" />
+                <SelectField field="Left_offence_PASSING" selected="True" rename="team2_offence_passing" input="Left_" />
+                <SelectField field="Left_offence_OVERALL" selected="True" rename="team2_offence_overall" input="Left_" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+    </Node>
+    <Node ToolID="45">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="654" y="272" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Expression>[Team1] = "Kansas City Chiefs"||[Team1] = "Philadelphia Eagles"</Expression>
+          <Mode>Custom</Mode>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>[Team1] = "Kansas City Chiefs"||[Team1] = "Philadelphia Eagles"</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+    </Node>
+    <Node ToolID="61">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="594" y="414" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <File OutputFileName="" RecordLimit="" SearchSubDirs="False" FileFormat="25">C:\Users\Brian Lin\Desktop\UCI\3rd quarter\Applied Forecast Modeling\NFL event\NFL Data.xlsx|||`Sheet3$`</File>
+          <FormatSpecificOptions>
+            <FirstRowData>False</FirstRowData>
+            <ImportLine>1</ImportLine>
+          </FormatSpecificOptions>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>NFL Data.xlsx
+Query=`Sheet3$`</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Team1" size="255" source="File: C:\Users\Brian Lin\Desktop\UCI\3rd quarter\Applied Forecast Modeling\NFL event\NFL Data.xlsx|||`Sheet3$`" type="V_String" />
+            <Field name="offence1_RUSHING" source="File: C:\Users\Brian Lin\Desktop\UCI\3rd quarter\Applied Forecast Modeling\NFL event\NFL Data.xlsx|||`Sheet3$`" type="Double" />
+            <Field name="offence1_PASSING" source="File: C:\Users\Brian Lin\Desktop\UCI\3rd quarter\Applied Forecast Modeling\NFL event\NFL Data.xlsx|||`Sheet3$`" type="Double" />
+            <Field name="offence1_OVERALL" source="File: C:\Users\Brian Lin\Desktop\UCI\3rd quarter\Applied Forecast Modeling\NFL event\NFL Data.xlsx|||`Sheet3$`" type="Double" />
+            <Field name="defence1_RUSHING" source="File: C:\Users\Brian Lin\Desktop\UCI\3rd quarter\Applied Forecast Modeling\NFL event\NFL Data.xlsx|||`Sheet3$`" type="Double" />
+            <Field name="defence1_PASSING" source="File: C:\Users\Brian Lin\Desktop\UCI\3rd quarter\Applied Forecast Modeling\NFL event\NFL Data.xlsx|||`Sheet3$`" type="Double" />
+            <Field name="defence1_OVERALL" source="File: C:\Users\Brian Lin\Desktop\UCI\3rd quarter\Applied Forecast Modeling\NFL event\NFL Data.xlsx|||`Sheet3$`" type="Double" />
+            <Field name="offence_RUSHING" source="File: C:\Users\Brian Lin\Desktop\UCI\3rd quarter\Applied Forecast Modeling\NFL event\NFL Data.xlsx|||`Sheet3$`" type="Double" />
+            <Field name="offence_PASSING" source="File: C:\Users\Brian Lin\Desktop\UCI\3rd quarter\Applied Forecast Modeling\NFL event\NFL Data.xlsx|||`Sheet3$`" type="Double" />
+            <Field name="offence_OVERALL" source="File: C:\Users\Brian Lin\Desktop\UCI\3rd quarter\Applied Forecast Modeling\NFL event\NFL Data.xlsx|||`Sheet3$`" type="Double" />
+            <Field name="defence_RUSHING" source="File: C:\Users\Brian Lin\Desktop\UCI\3rd quarter\Applied Forecast Modeling\NFL event\NFL Data.xlsx|||`Sheet3$`" type="Double" />
+            <Field name="defence_PASSING" source="File: C:\Users\Brian Lin\Desktop\UCI\3rd quarter\Applied Forecast Modeling\NFL event\NFL Data.xlsx|||`Sheet3$`" type="Double" />
+            <Field name="defence_OVERALL" source="File: C:\Users\Brian Lin\Desktop\UCI\3rd quarter\Applied Forecast Modeling\NFL event\NFL Data.xlsx|||`Sheet3$`" type="Double" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="63">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="1242" y="54" />
+      </GuiSettings>
+      <Properties>
+        <Configuration />
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="65">
+      <GuiSettings Plugin="Predict">
+        <Position x="1158" y="90" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <schemaID>Tools.Predict.2</schemaID>
+          <DesignerVersion />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Predict Values</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="Python" EngineDllEntryPoint="Predict\main.py" />
+    </Node>
+    <Node ToolID="66">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
+        <Position x="462" y="870" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <File MaxRecords="" FileFormat="25">C:\Users\Brian Lin\Desktop\UCI\3rd quarter\Applied Forecast Modeling\NFL event\newdata.xlsx|||Sheet1</File>
+          <Passwords />
+          <Disable>False</Disable>
+          <FormatSpecificOptions>
+            <PreserveFormat>False</PreserveFormat>
+            <SkipFieldNames>False</SkipFieldNames>
+            <OutputOption>Create</OutputOption>
+          </FormatSpecificOptions>
+          <MultiFile value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>newdata.xlsx
+Query=Sheet1</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
+    </Node>
+    <Node ToolID="20">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="821" y="54" width="245" height="194" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>linear predicting team 1 score</Caption>
+          <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="False" />
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="14">
+          <GuiSettings Plugin="Linear_Regression">
+            <Position x="846" y="103" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Value name="curPage">Home</Value>
+              <Value name="curTab">advanced</Value>
+              <Value name="standardize_pred">True</Value>
+              <Value name="internal_cv">True</Value>
+              <Value name="display_graphs">True</Value>
+              <Value name="set_seed_internal_cv">True</Value>
+              <Value name="set_seed_external_cv">True</Value>
+              <Value name="lambda_1se">True</Value>
+              <Value name="lambda_min">False</Value>
+              <Value name="Model Name">Linear_Regression_14</Value>
+              <Value name="Y Var">Team1_Score</Value>
+              <Value name="X Vars">team1_offence_rushing,team1_offence_passing ,team1_offence_overall,team1_defence_rushing,team1_defence_passing,team1_defence_overall ,team2_defence_rushing,team2_defence_passing,team2_defence_overall,team2_offence_rushing,team2_offence_passing,team2_offence_overall</Value>
+              <Value name="Omit Constant">False</Value>
+              <Value name="Use Weights">False</Value>
+              <Value name="Weight Vec" />
+              <Value name="regularization">False</Value>
+              <Value name="alpha">0.5</Value>
+              <Value name="nfolds">5</Value>
+              <Value name="lambda">lambda_1se</Value>
+              <Value name="seed_internal_cv">1</Value>
+              <Value name="lambda_no_cv">0.5</Value>
+              <Value name="external_cv">False</Value>
+              <Value name="nfolds_external">5</Value>
+              <Value name="numberTrials">3</Value>
+              <Value name="external_seed_value">1</Value>
+              <Value name="graph.resolution">1x</Value>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>Linear_Regression_14</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings Macro="Linear_Regression/Supporting_Macros/Linear_Regression.yxmc" EngineDll="Macro" EngineDllEntryPoint="Linear_Regression/Supporting_Macros/Linear_Regression.yxmc" />
+        </Node>
+        <Node ToolID="16">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+            <Position x="978" y="104" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <TempFile>C:\Users\BRIANL~1\AppData\Local\Temp\Engine_33920_2570ba87685f0341ab9f2566c132fc97_\Engine_33920_795601f14fd51141a7a938bc20e65ffd~.yxdb</TempFile>
+              <TempFileDataProfiling />
+              <Layout>
+                <ViewMode>Single</ViewMode>
+                <ViewSize value="100" />
+                <View1>
+                  <DefaultTab>Report</DefaultTab>
+                  <Hints>
+                    <Table />
+                  </Hints>
+                </View1>
+                <View2 />
+              </Layout>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+        </Node>
+        <Node ToolID="17">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+            <Position x="978" y="164" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <TempFile>C:\Users\BRIANL~1\AppData\Local\Temp\Engine_33920_2570ba87685f0341ab9f2566c132fc97_\Engine_33920_a4c7585d6bc9754fb8a6695ee00a0f43~.yxdb</TempFile>
+              <TempFileDataProfiling />
+              <Layout>
+                <ViewMode>Single</ViewMode>
+                <ViewSize value="100" />
+                <View1>
+                  <DefaultTab>Report</DefaultTab>
+                  <Hints>
+                    <Table />
+                  </Hints>
+                </View1>
+                <View2 />
+              </Layout>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+        </Node>
+      </ChildNodes>
+    </Node>
+    <Node ToolID="27">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="833" y="271" width="243" height="145" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>forest model predicting score</Caption>
+          <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="True" />
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="22">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+            <Position x="978" y="332" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <TempFile>C:\Users\BRIANL~1\AppData\Local\Temp\Engine_37688_309fb6fbfbc1c34f8f8daf2e40c3db7b_\Engine_37688_8073ce0d4ad40a41821981746743299b~.yxdb</TempFile>
+              <TempFileDataProfiling />
+              <Layout>
+                <ViewMode>Single</ViewMode>
+                <ViewSize value="100" />
+                <View1>
+                  <DefaultTab>Report</DefaultTab>
+                  <Hints>
+                    <Table />
+                  </Hints>
+                </View1>
+                <View2 />
+              </Layout>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+        </Node>
+        <Node ToolID="26">
+          <GuiSettings>
+            <Position x="858" y="320" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Value name="Model Name" />
+              <Value name="Y Var">Team1_Score</Value>
+              <Value name="X Vars">team1_offence_rushing + team1_offence_passing  + team1_offence_overall + team1_defence_rushing + team1_defence_passing + team1_defence_overall  + team2_defence_rushing + team2_defence_passing + team2_defence_overall + team2_offence_rushing + team2_offence_passing + team2_offence_overall</Value>
+              <Value name="Num Trees">500</Value>
+              <Value name="Custom Num Vars">False</Value>
+              <Value name="Num Vars">3</Value>
+              <Value name="model.size">False</Value>
+              <Value name="total.nodes">100</Value>
+              <Value name="max.depth">10</Value>
+              <Value name="node.size">5</Value>
+              <Value name="replace">True</Value>
+              <Value name="samp.rate">100</Value>
+              <Value name="inches">True</Value>
+              <Value name="in.w">5.50</Value>
+              <Value name="in.h">5.50</Value>
+              <Value name="centimeters">False</Value>
+              <Value name="cm.w">13.00</Value>
+              <Value name="cm.h">14.95</Value>
+              <Value name="graph.resolution">1x</Value>
+              <Value name="pointsize">10</Value>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings Macro="Predictive Tools\Forest_Model.yxmc" />
+        </Node>
+      </ChildNodes>
+    </Node>
+    <Node ToolID="32">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="833" y="427" width="253" height="145" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>neural network for score</Caption>
+          <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="False" />
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="29">
+          <GuiSettings>
+            <Position x="858" y="476" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Value name="model.name" />
+              <Value name="select.target">Team1_Score</Value>
+              <Value name="select.predictors">Team1=False,Team2=False,Team1_Score=False,Team2_Score=False,Team1_Passing=False,Team1_Rushing=False,Team1_Turnovers=False,Team2_Passing=False,Team2_Rushing=False,Team2_Turnovers=False,Team1_win=False,team1_offence_rushing=True,team1_offence_passing =True,team1_offence_overall=True,team1_defence_rushing=True,team1_defence_passing=True,team1_defence_overall =True,team2_defence_rushing=True,team2_defence_passing=True,team2_defence_overall=True,team2_offence_rushing=True,team2_offence_passing=True,team2_offence_overall=True</Value>
+              <Value name="use.weights">False</Value>
+              <Value name="select.weights">Team1_Score</Value>
+              <Value name="num.nodes">10</Value>
+              <Value name="marginal.plots">True</Value>
+              <Value name="custom.scaling">False</Value>
+              <Value name="scale.type">z-score</Value>
+              <Value name="decay">0.100</Value>
+              <Value name="range">0.700</Value>
+              <Value name="max.wts">1000</Value>
+              <Value name="max.iter">100</Value>
+              <Value name="inches">True</Value>
+              <Value name="in.w">5.50</Value>
+              <Value name="in.h">5.50</Value>
+              <Value name="centimeters">False</Value>
+              <Value name="cm.w">13.00</Value>
+              <Value name="cm.h">14.95</Value>
+              <Value name="graph.resolution">1x</Value>
+              <Value name="pointsize">10</Value>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings Macro="Predictive Tools\Neural_Network.yxmc" />
+        </Node>
+        <Node ToolID="30">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+            <Position x="1002" y="488" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <TempFile>C:\Users\BRIANL~1\AppData\Local\Temp\Engine_33920_2570ba87685f0341ab9f2566c132fc97_\Engine_33920_9ca4943896688a4cb2a350ef56962b65~.yxdb</TempFile>
+              <TempFileDataProfiling />
+              <Layout>
+                <ViewMode>Single</ViewMode>
+                <ViewSize value="100" />
+                <View1>
+                  <DefaultTab>Report</DefaultTab>
+                  <Hints>
+                    <Table />
+                  </Hints>
+                </View1>
+                <View2 />
+              </Layout>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+        </Node>
+      </ChildNodes>
+    </Node>
+    <Node ToolID="42">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="833" y="581" width="292" height="205" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>Logistic regression prediction win/loss</Caption>
+          <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="False" />
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="34">
+          <GuiSettings Plugin="Logistic_Regression">
+            <Position x="858" y="630" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Value name="curPage">Home</Value>
+              <Value name="curTab">advanced</Value>
+              <Value name="lambda_1se">True</Value>
+              <Value name="lambda_min">False</Value>
+              <Value name="Model Name">Logistic_Regression_34</Value>
+              <Value name="Y Var">Team1_win</Value>
+              <Value name="X Vars">team1_offence_rushing,team1_offence_passing ,team1_offence_overall,team1_defence_rushing,team1_defence_passing,team1_defence_overall ,team2_defence_rushing,team2_defence_passing,team2_defence_overall,team2_offence_rushing,team2_offence_passing,team2_offence_overall</Value>
+              <Value name="Use Weights">False</Value>
+              <Value name="Weight Vec" />
+              <Value name="regularization">False</Value>
+              <Value name="alpha">0.5</Value>
+              <Value name="standardize_pred">False</Value>
+              <Value name="internal_cv">False</Value>
+              <Value name="nfolds">5</Value>
+              <Value name="lambda">lambda_1se</Value>
+              <Value name="set_seed_internal_cv">False</Value>
+              <Value name="seed_internal_cv">1</Value>
+              <Value name="lambda_no_cv">0.5</Value>
+              <Value name="posClass">
+              </Value>
+              <Value name="Link">logit</Value>
+              <Value name="external_cv">False</Value>
+              <Value name="nfolds_external">5</Value>
+              <Value name="numberTrials">3</Value>
+              <Value name="stratified">False</Value>
+              <Value name="set_seed_external_cv">False</Value>
+              <Value name="external_seed_value">1</Value>
+              <Value name="graph.resolution">1x</Value>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>Logistic_Regression_34</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings Macro="Logistic_Regression/Supporting_Macros/Logistic_Regression.yxmc" EngineDll="Macro" EngineDllEntryPoint="Logistic_Regression/Supporting_Macros/Logistic_Regression.yxmc" />
+        </Node>
+        <Node ToolID="35">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+            <Position x="966" y="702" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <TempFile>C:\Users\BRIANL~1\AppData\Local\Temp\Engine_33920_2570ba87685f0341ab9f2566c132fc97_\Engine_33920_f75b0ad1f8fa6e43a7604046de4ef564~.yxdb</TempFile>
+              <TempFileDataProfiling />
+              <Layout>
+                <ViewMode>Single</ViewMode>
+                <ViewSize value="100" />
+                <View1>
+                  <DefaultTab>Report</DefaultTab>
+                  <Hints>
+                    <Table />
+                  </Hints>
+                </View1>
+                <View2 />
+              </Layout>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+        </Node>
+        <Node ToolID="36">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+            <Position x="966" y="630" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <TempFile>C:\Users\BRIANL~1\AppData\Local\Temp\Engine_33920_2570ba87685f0341ab9f2566c132fc97_\Engine_33920_25ade38dd222dd4c825e0169dc1d9977~.yxdb</TempFile>
+              <TempFileDataProfiling />
+              <Layout>
+                <ViewMode>Single</ViewMode>
+                <ViewSize value="100" />
+                <View1>
+                  <DefaultTab>Report</DefaultTab>
+                  <Hints>
+                    <Table />
+                  </Hints>
+                </View1>
+                <View2 />
+              </Layout>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+        </Node>
+      </ChildNodes>
+    </Node>
+    <Node ToolID="57">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="833" y="977" width="280" height="205" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>Nearest neighbor predict win or lost</Caption>
+          <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="True" />
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="46">
+          <GuiSettings>
+            <Position x="858" y="1038" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Value name="select.id">Team1_win</Value>
+              <Value name="select.fields">Team1_Score=False,Team2_Score=False,Team1_Passing=False,Team1_Rushing=False,Team1_Turnovers=False,Team2_Passing=False,Team2_Rushing=False,Team2_Turnovers=False,team1_offence_rushing=True,team1_offence_passing =True,team1_offence_overall=True,team1_defence_rushing=True,team1_defence_passing=True,team1_defence_overall =True,team2_defence_rushing=True,team2_defence_passing=True,team2_defence_overall=True,team2_offence_rushing=True,team2_offence_passing=True,team2_offence_overall=True</Value>
+              <Value name="standardize">False</Value>
+              <Value name="z_score">True</Value>
+              <Value name="unit_interval">False</Value>
+              <Value name="the_k">1</Value>
+              <Value name="algo.cover_tree">False</Value>
+              <Value name="algo.kd_tree">True</Value>
+              <Value name="algo.CR">False</Value>
+              <Value name="algo.brute">False</Value>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Measures">
+              <RecordInfo>
+                <Field name="Team1_win" size="16384" source="File: C:\Users\Brian Lin\Desktop\UCI\3rd quarter\Applied Forecast Modeling\NFL event\NFL Data.xlsx|||`Data$`" type="String" />
+                <Field name="__Type__" size="64" source="Formula: (Multiple Sources)" type="String" />
+                <Field name="team1_offence_rushing" source="File: C:\Users\Brian Lin\Desktop\UCI\3rd quarter\Applied Forecast Modeling\NFL event\NFL Data.xlsx|||`Sheet1$`" type="Double" />
+                <Field name="team1_offence_passing " source="File: C:\Users\Brian Lin\Desktop\UCI\3rd quarter\Applied Forecast Modeling\NFL event\NFL Data.xlsx|||`Sheet1$`" type="Double" />
+                <Field name="team1_offence_overall" source="File: C:\Users\Brian Lin\Desktop\UCI\3rd quarter\Applied Forecast Modeling\NFL event\NFL Data.xlsx|||`Sheet1$`" type="Double" />
+                <Field name="team1_defence_rushing" source="File: C:\Users\Brian Lin\Desktop\UCI\3rd quarter\Applied Forecast Modeling\NFL event\NFL Data.xlsx|||`Sheet1$`" type="Double" />
+                <Field name="team1_defence_passing" source="File: C:\Users\Brian Lin\Desktop\UCI\3rd quarter\Applied Forecast Modeling\NFL event\NFL Data.xlsx|||`Sheet1$`" type="Double" />
+                <Field name="team1_defence_overall " scale="6" size="19" source="File: C:\Users\Brian Lin\Desktop\UCI\3rd quarter\Applied Forecast Modeling\NFL event\NFL Data.xlsx|||`Sheet1$`" type="FixedDecimal" />
+                <Field name="team2_defence_rushing" source="File: C:\Users\Brian Lin\Desktop\UCI\3rd quarter\Applied Forecast Modeling\NFL event\NFL Data.xlsx|||`Sheet1$`" type="Double" />
+                <Field name="team2_defence_passing" source="File: C:\Users\Brian Lin\Desktop\UCI\3rd quarter\Applied Forecast Modeling\NFL event\NFL Data.xlsx|||`Sheet1$`" type="Double" />
+                <Field name="team2_defence_overall" source="File: C:\Users\Brian Lin\Desktop\UCI\3rd quarter\Applied Forecast Modeling\NFL event\NFL Data.xlsx|||`Sheet1$`" type="Double" />
+                <Field name="team2_offence_rushing" source="File: C:\Users\Brian Lin\Desktop\UCI\3rd quarter\Applied Forecast Modeling\NFL event\NFL Data.xlsx|||`Sheet1$`" type="Double" />
+                <Field name="team2_offence_passing" source="File: C:\Users\Brian Lin\Desktop\UCI\3rd quarter\Applied Forecast Modeling\NFL event\NFL Data.xlsx|||`Sheet1$`" type="Double" />
+                <Field name="team2_offence_overall" source="File: C:\Users\Brian Lin\Desktop\UCI\3rd quarter\Applied Forecast Modeling\NFL event\NFL Data.xlsx|||`Sheet1$`" type="Double" />
+              </RecordInfo>
+            </MetaInfo>
+            <MetaInfo connection="Neighbors">
+              <RecordInfo>
+                <Field name="Team1_win" size="1073741823" source="R-DATA:" type="V_WString" />
+                <Field name="Team1_win_1" size="1073741823" source="R-DATA:" type="V_WString" />
+                <Field name="Dist_1" source="R-DATA:" type="Double" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings Macro="Predictive Tools\Find_Nearest_Neighbors.yxmc" />
+        </Node>
+        <Node ToolID="50">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+            <Position x="1002" y="1098" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <TempFile>C:\Users\BRIANL~1\AppData\Local\Temp\Engine_21036_f8c39cec98869045b5f4c5b8d79a7ca4_\Engine_21036_4480bc3a5739764c8760eb5b824aaf8f~.yxdb</TempFile>
+              <TempFileDataProfiling />
+              <Layout>
+                <ViewMode>Single</ViewMode>
+                <ViewSize value="100" />
+                <View1>
+                  <DefaultTab>Profile</DefaultTab>
+                  <Hints>
+                    <Table />
+                  </Hints>
+                </View1>
+                <View2 />
+              </Layout>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+        </Node>
+        <Node ToolID="51">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+            <Position x="1002" y="1026" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <TempFile>C:\Users\BRIANL~1\AppData\Local\Temp\Engine_26396_a88183773c01384db637f313577cd356_\Engine_26396_7c88286de3d2a14282bc0cd1116ee6a1~.yxdb</TempFile>
+              <TempFileDataProfiling />
+              <Layout>
+                <ViewMode>Single</ViewMode>
+                <ViewSize value="100" />
+                <View1>
+                  <DefaultTab>Profile</DefaultTab>
+                  <Hints>
+                    <Table />
+                  </Hints>
+                </View1>
+                <View2 />
+              </Layout>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+        </Node>
+      </ChildNodes>
+    </Node>
+    <Node ToolID="43">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="833" y="797" width="289" height="157" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>forest model predicting score</Caption>
+          <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="False" />
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="37">
+          <GuiSettings>
+            <Position x="858" y="846" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Value name="Model Name" />
+              <Value name="Y Var">Team1_Score</Value>
+              <Value name="X Vars">team1_offence_rushing + team1_offence_passing  + team1_offence_overall + team1_defence_rushing + team1_defence_passing + team1_defence_overall  + team2_defence_rushing + team2_defence_passing + team2_defence_overall + team2_offence_rushing + team2_offence_passing + team2_offence_overall</Value>
+              <Value name="Num Trees">500</Value>
+              <Value name="Custom Num Vars">False</Value>
+              <Value name="Num Vars">3</Value>
+              <Value name="model.size">False</Value>
+              <Value name="total.nodes">100</Value>
+              <Value name="max.depth">10</Value>
+              <Value name="node.size">5</Value>
+              <Value name="replace">True</Value>
+              <Value name="samp.rate">100</Value>
+              <Value name="inches">True</Value>
+              <Value name="in.w">5.50</Value>
+              <Value name="in.h">5.50</Value>
+              <Value name="centimeters">False</Value>
+              <Value name="cm.w">13.00</Value>
+              <Value name="cm.h">14.95</Value>
+              <Value name="graph.resolution">1x</Value>
+              <Value name="pointsize">10</Value>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings Macro="Predictive Tools\Forest_Model.yxmc" />
+        </Node>
+        <Node ToolID="38">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+            <Position x="1038" y="870" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <TempFile>C:\Users\BRIANL~1\AppData\Local\Temp\Engine_33920_2570ba87685f0341ab9f2566c132fc97_\Engine_33920_156f2ba84378304e90f8b73f28321f57~.yxdb</TempFile>
+              <TempFileDataProfiling />
+              <Layout>
+                <ViewMode>Single</ViewMode>
+                <ViewSize value="100" />
+                <View1>
+                  <DefaultTab>Report</DefaultTab>
+                  <Hints>
+                    <Table />
+                  </Hints>
+                </View1>
+                <View2 />
+              </Layout>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+        </Node>
+      </ChildNodes>
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection>
+      <Origin ToolID="1" Connection="Output" />
+      <Destination ToolID="3" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="2" Connection="Output" />
+      <Destination ToolID="3" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="1" Connection="Output" />
+      <Destination ToolID="7" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="6" Connection="True" />
+      <Destination ToolID="7" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="3" Connection="Join" />
+      <Destination ToolID="6" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="7" Connection="Join" />
+      <Destination ToolID="45" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="45" Connection="True" />
+      <Destination ToolID="14" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="45" Connection="True" />
+      <Destination ToolID="26" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="45" Connection="True" />
+      <Destination ToolID="29" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="45" Connection="True" />
+      <Destination ToolID="34" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="45" Connection="True" />
+      <Destination ToolID="37" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="45" Connection="True" />
+      <Destination ToolID="46" Connection="Data" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="45" Connection="False" />
+      <Destination ToolID="46" Connection="Query" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="45" Connection="True" />
+      <Destination ToolID="66" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="61" Connection="Output" />
+      <Destination ToolID="65" Connection="Data" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="14" Connection="Output" />
+      <Destination ToolID="65" Connection="Model" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="65" Connection="PredictedData" />
+      <Destination ToolID="63" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="14" Connection="Reports" />
+      <Destination ToolID="16" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="14" Connection="Interactive Report" />
+      <Destination ToolID="17" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="26" Connection="Reports" />
+      <Destination ToolID="22" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="29" Connection="Report" />
+      <Destination ToolID="30" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="34" Connection="Interactive Report" />
+      <Destination ToolID="35" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="34" Connection="Reports" />
+      <Destination ToolID="36" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="46" Connection="Measures" />
+      <Destination ToolID="50" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="46" Connection="Neighbors" />
+      <Destination ToolID="51" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="37" Connection="Reports" />
+      <Destination ToolID="38" Connection="Input" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="True" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <RunWithE2 value="True" />
+    <PredictiveToolsCodePage value="1252" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="True" />
+    <ZoomLevel value="0" />
+    <LayoutType>Horizontal</LayoutType>
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>New Workflow1</Name>
+      <Description />
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author />
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+      <WorkflowId value="aa83505d-150f-4df7-ad0e-a1c0269f86a0" />
+      <Telemetry>
+        <PreviousWorkflowId value="60ba2993-d4f5-4e67-9879-b80b824d6de0" />
+        <OriginWorkflowId value="60ba2993-d4f5-4e67-9879-b80b824d6de0" />
+      </Telemetry>
+    </MetaInfo>
+    <Events>
+      <Enabled value="True" />
+    </Events>
+  </Properties>
+</AlteryxDocument>
